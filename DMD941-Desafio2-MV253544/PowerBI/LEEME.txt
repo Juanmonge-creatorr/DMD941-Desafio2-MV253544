@@ -1,0 +1,3 @@
+Copiar aqui el archivo Dashboard_DMD941_Desafio2.pbix
+(esta guardado en C:\Tarea_DMD941_D2\Dashboard_DMD941_Desafio2.pbix).
+Usa conexion en vivo a localhost / DMD941_AdventureWorks_OLAP.

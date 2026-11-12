@@ -1,0 +1,3 @@
+Copiar aqui la carpeta del proyecto de Visual Studio:
+C:\Tarea_DMD941_D2\DMD941_Cubo_AdventureWorks
+(contiene el .sln y la subcarpeta con .ds, .dsv, .dim y .cube).

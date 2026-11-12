@@ -1,0 +1,49 @@
+/* DMD941 - Desafio Practico 2 - Juan Carlos Monge Ventura (MV253544)
+   Consultas MDX sobre el cubo [Ventas AW] (base OLAP DMD941_AdventureWorks_OLAP) */
+
+-- P1a. Ventas por categoria y subcategoria en cada anio (ordenadas de mayor a menor)
+SELECT NON EMPTY [Fecha].[Anio].[Anio].MEMBERS ON COLUMNS,
+NON EMPTY ORDER(
+    [Producto].[Categoria].[Categoria].MEMBERS * [Producto].[Subcategoria].[Subcategoria].MEMBERS,
+    [Measures].[Ventas], BDESC) ON ROWS
+FROM [Ventas AW]
+WHERE [Measures].[Ventas];
+
+-- P1b. Tendencia trimestral por categoria: variacion % contra el trimestre anterior
+WITH MEMBER [Measures].[Ventas Trim Anterior] AS
+    ([Measures].[Ventas], [Fecha].[Calendario].CurrentMember.PrevMember), FORMAT_STRING = 'Currency'
+MEMBER [Measures].[Variacion %] AS
+    IIF(ISEMPTY([Measures].[Ventas Trim Anterior]) OR [Measures].[Ventas Trim Anterior] = 0, NULL,
+        ([Measures].[Ventas] - [Measures].[Ventas Trim Anterior]) / [Measures].[Ventas Trim Anterior]),
+    FORMAT_STRING = 'Percent'
+SELECT {[Measures].[Ventas], [Measures].[Ventas Trim Anterior], [Measures].[Variacion %]} ON COLUMNS,
+NON EMPTY [Producto].[Categoria].[Categoria].MEMBERS * [Fecha].[Calendario].[Trimestre].MEMBERS ON ROWS
+FROM [Ventas AW];
+
+-- P2. Territorios mas rentables: Internet vs Reseller
+WITH MEMBER [Measures].[Utilidad Internet] AS ([Measures].[Utilidad], [Canal].[Canal].&[1]), FORMAT_STRING = 'Currency'
+MEMBER [Measures].[Utilidad Reseller] AS ([Measures].[Utilidad], [Canal].[Canal].&[2]), FORMAT_STRING = 'Currency'
+MEMBER [Measures].[Margen Internet] AS ([Measures].[Margen %], [Canal].[Canal].&[1]), FORMAT_STRING = 'Percent'
+MEMBER [Measures].[Margen Reseller] AS ([Measures].[Margen %], [Canal].[Canal].&[2]), FORMAT_STRING = 'Percent'
+SELECT {[Measures].[Ventas], [Measures].[Utilidad], [Measures].[Margen %],
+        [Measures].[Utilidad Internet], [Measures].[Utilidad Reseller],
+        [Measures].[Margen Internet], [Measures].[Margen Reseller]} ON COLUMNS,
+NON EMPTY ORDER([Territorio].[Region].[Region].MEMBERS, [Measures].[Utilidad], BDESC) ON ROWS
+FROM [Ventas AW];
+
+-- P3a. Top 10 productos mas rentables y su utilidad por anio
+WITH SET [Top 10 Productos] AS
+    TOPCOUNT([Producto].[Producto].[Producto].MEMBERS, 10, [Measures].[Utilidad])
+SELECT NON EMPTY {[Fecha].[Anio].[Anio].MEMBERS, [Fecha].[Anio].[All]} ON COLUMNS,
+[Top 10 Productos] ON ROWS
+FROM [Ventas AW]
+WHERE [Measures].[Utilidad];
+
+-- P3b. Distribucion trimestral de la utilidad del Top 10
+WITH SET [Top 10 Productos] AS
+    TOPCOUNT([Producto].[Producto].[Producto].MEMBERS, 10, [Measures].[Utilidad])
+MEMBER [Measures].[Utilidad Top 10] AS SUM([Top 10 Productos], [Measures].[Utilidad]), FORMAT_STRING = 'Currency'
+MEMBER [Measures].[% del Total] AS [Measures].[Utilidad Top 10] / [Measures].[Utilidad], FORMAT_STRING = 'Percent'
+SELECT {[Measures].[Utilidad Top 10], [Measures].[Utilidad], [Measures].[% del Total]} ON COLUMNS,
+NON EMPTY [Fecha].[Calendario].[Trimestre].MEMBERS ON ROWS
+FROM [Ventas AW];
