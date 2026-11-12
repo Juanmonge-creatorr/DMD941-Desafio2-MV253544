@@ -1,0 +1,143 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DSV AW</ID>
+  <Name>DSV AW</Name>
+  <CreatedTimestamp>2026-11-11T22:03:47.296667Z</CreatedTimestamp>
+  <LastSchemaUpdate>2026-11-11T22:03:47.296667Z</LastSchemaUpdate>
+  <DataSourceID>AdventureWorksDW</DataSourceID>
+  <Schema>
+    <xs:schema id="DSV_x0020_AW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="DSV_x0020_AW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="vDate" msprop:DbTableName="vDate" msprop:FriendlyName="vDate" msprop:TableType="View" msprop:QueryDefinition="SELECT DateKey, CONVERT(nvarchar(10), FullDateAlternateKey, 23) AS FechaNombre, CAST(CalendarYear AS int) AS Anio, CAST(CalendarYear AS int) * 10 + CAST(CalendarQuarter AS int) AS TrimestreKey, N'T' + CAST(CalendarQuarter AS nvarchar(1)) + N' ' + CAST(CalendarYear AS nvarchar(4)) AS TrimestreNombre, CAST(CalendarQuarter AS int) AS NumTrimestre, N'T' + CAST(CalendarQuarter AS nvarchar(1)) AS NumTrimestreNombre, CAST(CalendarYear AS int) * 100 + CAST(MonthNumberOfYear AS int) AS MesKey, SpanishMonthName + N' ' + CAST(CalendarYear AS nvarchar(4)) AS MesNombre FROM dbo.DimDate" msprop:IsLogical="True">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateKey" msprop:FriendlyName="DateKey" msprop:DbColumnName="DateKey" type="xs:int" />
+                  <xs:element name="FechaNombre" msprop:FriendlyName="FechaNombre" msprop:DbColumnName="FechaNombre" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Anio" msprop:FriendlyName="Anio" msprop:DbColumnName="Anio" type="xs:int" minOccurs="0" />
+                  <xs:element name="TrimestreKey" msprop:FriendlyName="TrimestreKey" msprop:DbColumnName="TrimestreKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="TrimestreNombre" msprop:FriendlyName="TrimestreNombre" msprop:DbColumnName="TrimestreNombre" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NumTrimestre" msprop:FriendlyName="NumTrimestre" msprop:DbColumnName="NumTrimestre" type="xs:int" minOccurs="0" />
+                  <xs:element name="NumTrimestreNombre" msprop:FriendlyName="NumTrimestreNombre" msprop:DbColumnName="NumTrimestreNombre" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MesKey" msprop:FriendlyName="MesKey" msprop:DbColumnName="MesKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="MesNombre" msprop:FriendlyName="MesNombre" msprop:DbColumnName="MesNombre" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="vProduct" msprop:DbTableName="vProduct" msprop:FriendlyName="vProduct" msprop:TableType="View" msprop:QueryDefinition="SELECT p.ProductKey, p.EnglishProductName AS Producto, CAST(ISNULL(sc.ProductSubcategoryKey, 0) AS int) AS SubcategoriaKey, ISNULL(sc.SpanishProductSubcategoryName, N'Sin subcategoria') AS Subcategoria, CAST(ISNULL(c.ProductCategoryKey, 0) AS int) AS CategoriaKey, ISNULL(c.SpanishProductCategoryName, N'Sin categoria') AS Categoria FROM dbo.DimProduct AS p LEFT JOIN dbo.DimProductSubcategory AS sc ON p.ProductSubcategoryKey = sc.ProductSubcategoryKey LEFT JOIN dbo.DimProductCategory AS c ON sc.ProductCategoryKey = c.ProductCategoryKey" msprop:IsLogical="True">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProductKey" msprop:FriendlyName="ProductKey" msprop:DbColumnName="ProductKey" type="xs:int" />
+                  <xs:element name="Producto" msprop:FriendlyName="Producto" msprop:DbColumnName="Producto" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SubcategoriaKey" msprop:FriendlyName="SubcategoriaKey" msprop:DbColumnName="SubcategoriaKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="Subcategoria" msprop:FriendlyName="Subcategoria" msprop:DbColumnName="Subcategoria" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CategoriaKey" msprop:FriendlyName="CategoriaKey" msprop:DbColumnName="CategoriaKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="Categoria" msprop:FriendlyName="Categoria" msprop:DbColumnName="Categoria" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="vTerritory" msprop:DbTableName="vTerritory" msprop:FriendlyName="vTerritory" msprop:TableType="View" msprop:QueryDefinition="SELECT SalesTerritoryKey, SalesTerritoryRegion AS Region, SalesTerritoryCountry AS Pais, SalesTerritoryGroup AS Grupo FROM dbo.DimSalesTerritory" msprop:IsLogical="True">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SalesTerritoryKey" msprop:FriendlyName="SalesTerritoryKey" msprop:DbColumnName="SalesTerritoryKey" type="xs:int" />
+                  <xs:element name="Region" msprop:FriendlyName="Region" msprop:DbColumnName="Region" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Pais" msprop:FriendlyName="Pais" msprop:DbColumnName="Pais" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Grupo" msprop:FriendlyName="Grupo" msprop:DbColumnName="Grupo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="vChannel" msprop:DbTableName="vChannel" msprop:FriendlyName="vChannel" msprop:TableType="View" msprop:QueryDefinition="SELECT 1 AS CanalKey, N'Internet' AS Canal UNION ALL SELECT 2, N'Reseller'" msprop:IsLogical="True">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CanalKey" msprop:FriendlyName="CanalKey" msprop:DbColumnName="CanalKey" type="xs:int" />
+                  <xs:element name="Canal" msprop:FriendlyName="Canal" msprop:DbColumnName="Canal" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="vFactSales" msprop:DbTableName="vFactSales" msprop:FriendlyName="vFactSales" msprop:TableType="View" msprop:QueryDefinition="SELECT 1 AS CanalKey, ProductKey, OrderDateKey, SalesTerritoryKey, CAST(OrderQuantity AS int) AS Cantidad, CAST(SalesAmount AS float) AS Ventas, CAST(TotalProductCost AS float) AS Costo, CAST(SalesAmount - TotalProductCost AS float) AS Utilidad FROM dbo.FactInternetSales UNION ALL SELECT 2, ProductKey, OrderDateKey, SalesTerritoryKey, CAST(OrderQuantity AS int), CAST(SalesAmount AS float), CAST(TotalProductCost AS float), CAST(SalesAmount - TotalProductCost AS float) FROM dbo.FactResellerSales" msprop:IsLogical="True">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CanalKey" msprop:FriendlyName="CanalKey" msprop:DbColumnName="CanalKey" type="xs:int" />
+                  <xs:element name="ProductKey" msprop:FriendlyName="ProductKey" msprop:DbColumnName="ProductKey" type="xs:int" />
+                  <xs:element name="OrderDateKey" msprop:FriendlyName="OrderDateKey" msprop:DbColumnName="OrderDateKey" type="xs:int" />
+                  <xs:element name="SalesTerritoryKey" msprop:FriendlyName="SalesTerritoryKey" msprop:DbColumnName="SalesTerritoryKey" type="xs:int" />
+                  <xs:element name="Cantidad" msprop:FriendlyName="Cantidad" msprop:DbColumnName="Cantidad" type="xs:int" minOccurs="0" />
+                  <xs:element name="Ventas" msprop:FriendlyName="Ventas" msprop:DbColumnName="Ventas" type="xs:double" minOccurs="0" />
+                  <xs:element name="Costo" msprop:FriendlyName="Costo" msprop:DbColumnName="Costo" type="xs:double" minOccurs="0" />
+                  <xs:element name="Utilidad" msprop:FriendlyName="Utilidad" msprop:DbColumnName="Utilidad" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <DSV_x0020_AW xmlns="" />
+  </Schema>
+</DataSourceView>

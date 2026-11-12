@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37906.3 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DMD941_Cubo_AdventureWorks", "DMD941_Cubo_AdventureWorks\DMD941_Cubo_AdventureWorks.dwproj", "{C39A5DC5-353F-C0F4-C82E-40FEFDA9CDCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C39A5DC5-353F-C0F4-C82E-40FEFDA9CDCB}.Development|Default.ActiveCfg = Development
+		{C39A5DC5-353F-C0F4-C82E-40FEFDA9CDCB}.Development|Default.Build.0 = Development
+		{C39A5DC5-353F-C0F4-C82E-40FEFDA9CDCB}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {163271A7-12C9-4F54-AB49-42B5AC4C5B63}
+	EndGlobalSection
+EndGlobal

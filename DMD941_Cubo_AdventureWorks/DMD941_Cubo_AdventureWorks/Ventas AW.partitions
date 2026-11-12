@@ -1,0 +1,33 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="901299a4-e2dc-40b9-adf8-4635cf042ddd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ventas AW</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Ventas</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a9006273-24b2-4f36-82d4-95ebb6931818">
+          <ID>Ventas</ID>
+          <Name>Ventas</Name>
+          <CreatedTimestamp>2026-11-11T22:03:47.466667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2026-11-11T22:03:47.466667Z</LastSchemaUpdate>
+          <LastProcessed>2026-11-11T22:04:11.75Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2de9d8d3-a2a8-4426-959f-7f767580ffe2">
+            <DataSourceViewID>DSV AW</DataSourceViewID>
+            <TableID>vFactSales</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="4aa7ea99-35fc-4e84-ba28-6b2cb9d3f7be">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="85e24024-3551-48b5-82a5-24a744016d4e" />
+          </ProactiveCaching>
+          <EstimatedSize>1099502</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

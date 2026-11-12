@@ -1,0 +1,1290 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DMD941_Cubo_AdventureWorks</ID>
+  <Name>DMD941_Cubo_AdventureWorks</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <Language>1033</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <EstimatedSize>1610987</EstimatedSize>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>Canal</ID>
+      <Name>Canal</Name>
+      <CreatedTimestamp>2026-11-11T22:03:47.386667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2026-11-11T22:03:47.386667Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>2026-11-11T22:04:07.673333Z</LastProcessed>
+      <State>Processed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DSV AW</DataSourceViewID>
+      </Source>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Language>1033</Language>
+      <Collation>Latin1_General_CI_AS</Collation>
+      <UnknownMemberName>Unknown</UnknownMemberName>
+      <Attributes>
+        <Attribute>
+          <ID>Canal</ID>
+          <Name>Canal</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vChannel</TableID>
+                <ColumnID>CanalKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>20</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vChannel</TableID>
+              <ColumnID>Canal</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Fecha</ID>
+      <Name>Fecha</Name>
+      <CreatedTimestamp>2026-11-11T22:03:47.343333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2026-11-11T22:03:47.343333Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>2026-11-11T22:04:09.463333Z</LastProcessed>
+      <State>Processed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DSV AW</DataSourceViewID>
+      </Source>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Language>1033</Language>
+      <Collation>Latin1_General_CI_AS</Collation>
+      <UnknownMemberName>Unknown</UnknownMemberName>
+      <Attributes>
+        <Attribute>
+          <ID>Fecha</ID>
+          <Name>Fecha</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vDate</TableID>
+                <ColumnID>DateKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>10</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vDate</TableID>
+              <ColumnID>FechaNombre</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Mes</AttributeID>
+              <Name>Mes</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Numero Trimestre</AttributeID>
+              <Name>Numero Trimestre</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Mes</ID>
+          <Name>Mes</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vDate</TableID>
+                <ColumnID>MesKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>40</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vDate</TableID>
+              <ColumnID>MesNombre</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Trimestre</AttributeID>
+              <Name>Trimestre</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Trimestre</ID>
+          <Name>Trimestre</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vDate</TableID>
+                <ColumnID>TrimestreKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>10</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vDate</TableID>
+              <ColumnID>TrimestreNombre</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Anio</AttributeID>
+              <Name>Anio</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Anio</ID>
+          <Name>Anio</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vDate</TableID>
+                <ColumnID>Anio</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vDate</TableID>
+              <ColumnID>Anio</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Numero Trimestre</ID>
+          <Name>Numero Trimestre</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vDate</TableID>
+                <ColumnID>NumTrimestre</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>5</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vDate</TableID>
+              <ColumnID>NumTrimestreNombre</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Calendario</ID>
+          <Name>Calendario</Name>
+          <Levels>
+            <Level>
+              <ID>Anio</ID>
+              <Name>Anio</Name>
+              <SourceAttributeID>Anio</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Trimestre</ID>
+              <Name>Trimestre</Name>
+              <SourceAttributeID>Trimestre</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Mes</ID>
+              <Name>Mes</Name>
+              <SourceAttributeID>Mes</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Fecha</ID>
+              <Name>Fecha</Name>
+              <SourceAttributeID>Fecha</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Producto</ID>
+      <Name>Producto</Name>
+      <CreatedTimestamp>2026-11-11T22:03:47.366667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2026-11-11T22:03:47.366667Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>2026-11-11T22:04:09.26Z</LastProcessed>
+      <State>Processed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DSV AW</DataSourceViewID>
+      </Source>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Language>1033</Language>
+      <Collation>Latin1_General_CI_AS</Collation>
+      <UnknownMemberName>Unknown</UnknownMemberName>
+      <Attributes>
+        <Attribute>
+          <ID>Producto</ID>
+          <Name>Producto</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vProduct</TableID>
+                <ColumnID>ProductKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vProduct</TableID>
+              <ColumnID>Producto</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Subcategoria</AttributeID>
+              <Name>Subcategoria</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Subcategoria</ID>
+          <Name>Subcategoria</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vProduct</TableID>
+                <ColumnID>SubcategoriaKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vProduct</TableID>
+              <ColumnID>Subcategoria</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Categoria</AttributeID>
+              <Name>Categoria</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Categoria</ID>
+          <Name>Categoria</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vProduct</TableID>
+                <ColumnID>CategoriaKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vProduct</TableID>
+              <ColumnID>Categoria</ColumnID>
+            </Source>
+          </NameColumn>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Categorias</ID>
+          <Name>Categorias</Name>
+          <Levels>
+            <Level>
+              <ID>Categoria</ID>
+              <Name>Categoria</Name>
+              <SourceAttributeID>Categoria</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Subcategoria</ID>
+              <Name>Subcategoria</Name>
+              <SourceAttributeID>Subcategoria</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Producto</ID>
+              <Name>Producto</Name>
+              <SourceAttributeID>Producto</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>Territorio</ID>
+      <Name>Territorio</Name>
+      <CreatedTimestamp>2026-11-11T22:03:47.376667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2026-11-11T22:03:47.376667Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>2026-11-11T22:04:08.73Z</LastProcessed>
+      <State>Processed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>DSV AW</DataSourceViewID>
+      </Source>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Language>1033</Language>
+      <Collation>Latin1_General_CI_AS</Collation>
+      <UnknownMemberName>Unknown</UnknownMemberName>
+      <Attributes>
+        <Attribute>
+          <ID>Region</ID>
+          <Name>Region</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vTerritory</TableID>
+                <ColumnID>SalesTerritoryKey</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vTerritory</TableID>
+              <ColumnID>Region</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Pais</AttributeID>
+              <Name>Pais</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Pais</ID>
+          <Name>Pais</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vTerritory</TableID>
+                <ColumnID>Pais</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vTerritory</TableID>
+              <ColumnID>Pais</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Grupo</AttributeID>
+              <Name>Grupo</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Grupo</ID>
+          <Name>Grupo</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>50</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>vTerritory</TableID>
+                <ColumnID>Grupo</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>50</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>vTerritory</TableID>
+              <ColumnID>Grupo</ColumnID>
+            </Source>
+          </NameColumn>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Geografia</ID>
+          <Name>Geografia</Name>
+          <Levels>
+            <Level>
+              <ID>Grupo</ID>
+              <Name>Grupo</Name>
+              <SourceAttributeID>Grupo</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Pais</ID>
+              <Name>Pais</Name>
+              <SourceAttributeID>Pais</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>Region</ID>
+              <Name>Region</Name>
+              <SourceAttributeID>Region</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>Ventas AW</ID>
+      <Name>Ventas AW</Name>
+      <CreatedTimestamp>2026-11-11T22:03:47.406667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2026-11-11T22:03:47.406667Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>2026-11-11T22:04:11.82Z</LastProcessed>
+      <State>Processed</State>
+      <Language>1033</Language>
+      <Dimensions>
+        <Dimension>
+          <ID>Fecha</ID>
+          <Name>Fecha</Name>
+          <DimensionID>Fecha</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Fecha</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Mes</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Trimestre</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Anio</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Numero Trimestre</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Calendario</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Producto</ID>
+          <Name>Producto</Name>
+          <DimensionID>Producto</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Producto</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Subcategoria</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Categoria</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Categorias</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Territorio</ID>
+          <Name>Territorio</Name>
+          <DimensionID>Territorio</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Region</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Pais</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Grupo</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Geografia</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>Canal</ID>
+          <Name>Canal</Name>
+          <DimensionID>Canal</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>Canal</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>Ventas</ID>
+          <Name>Ventas</Name>
+          <CreatedTimestamp>2026-11-11T22:03:47.44Z</CreatedTimestamp>
+          <LastSchemaUpdate>2026-11-11T22:03:47.44Z</LastSchemaUpdate>
+          <LastProcessed>2026-11-11T22:04:11.81Z</LastProcessed>
+          <State>Processed</State>
+          <Measures>
+            <Measure>
+              <ID>Ventas</ID>
+              <Name>Ventas</Name>
+              <DataType>Double</DataType>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>vFactSales</TableID>
+                  <ColumnID>Ventas</ColumnID>
+                </Source>
+              </Source>
+              <FormatString>Currency</FormatString>
+            </Measure>
+            <Measure>
+              <ID>Costo</ID>
+              <Name>Costo</Name>
+              <DataType>Double</DataType>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>vFactSales</TableID>
+                  <ColumnID>Costo</ColumnID>
+                </Source>
+              </Source>
+              <FormatString>Currency</FormatString>
+            </Measure>
+            <Measure>
+              <ID>Utilidad</ID>
+              <Name>Utilidad</Name>
+              <DataType>Double</DataType>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>vFactSales</TableID>
+                  <ColumnID>Utilidad</ColumnID>
+                </Source>
+              </Source>
+              <FormatString>Currency</FormatString>
+            </Measure>
+            <Measure>
+              <ID>Cantidad</ID>
+              <Name>Cantidad</Name>
+              <DataType>Integer</DataType>
+              <Source>
+                <DataType>Integer</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>vFactSales</TableID>
+                  <ColumnID>Cantidad</ColumnID>
+                </Source>
+              </Source>
+              <FormatString>#,##0</FormatString>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <EstimatedSize>1099502</EstimatedSize>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Fecha</CubeDimensionID>
+              <Cardinality>One</Cardinality>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vFactSales</TableID>
+                        <ColumnID>OrderDateKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vDate</TableID>
+                        <ColumnID>MesKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Trimestre</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vDate</TableID>
+                        <ColumnID>TrimestreKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Anio</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vDate</TableID>
+                        <ColumnID>Anio</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Numero Trimestre</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vDate</TableID>
+                        <ColumnID>NumTrimestre</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Producto</CubeDimensionID>
+              <Cardinality>One</Cardinality>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Producto</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vFactSales</TableID>
+                        <ColumnID>ProductKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Subcategoria</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vProduct</TableID>
+                        <ColumnID>SubcategoriaKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Categoria</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vProduct</TableID>
+                        <ColumnID>CategoriaKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Territorio</CubeDimensionID>
+              <Cardinality>One</Cardinality>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Region</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vFactSales</TableID>
+                        <ColumnID>SalesTerritoryKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Pais</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>WChar</DataType>
+                      <DataSize>50</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vTerritory</TableID>
+                        <ColumnID>Pais</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Grupo</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>WChar</DataType>
+                      <DataSize>50</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vTerritory</TableID>
+                        <ColumnID>Grupo</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Canal</CubeDimensionID>
+              <Cardinality>One</Cardinality>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Canal</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>vFactSales</TableID>
+                        <ColumnID>CanalKey</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>Ventas</ID>
+              <Name>Ventas</Name>
+              <CreatedTimestamp>2026-11-11T22:03:47.466667Z</CreatedTimestamp>
+              <LastSchemaUpdate>2026-11-11T22:03:47.466667Z</LastSchemaUpdate>
+              <LastProcessed>2026-11-11T22:04:11.75Z</LastProcessed>
+              <State>Processed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>DSV AW</DataSourceViewID>
+                <TableID>vFactSales</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+              <ProactiveCaching>
+                <SilenceInterval>-PT1S</SilenceInterval>
+                <Latency>-PT1S</Latency>
+                <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+                <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+                <Source xsi:type="ProactiveCachingInheritedBinding" />
+              </ProactiveCaching>
+              <EstimatedSize>1099502</EstimatedSize>
+            </Partition>
+          </Partitions>
+          <ProactiveCaching>
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" />
+          </ProactiveCaching>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>DSV AW</DataSourceViewID>
+      </Source>
+      <MdxScripts>
+        <MdxScript>
+          <ID>MdxScript</ID>
+          <Name>MdxScript</Name>
+          <CreatedTimestamp>2026-11-11T22:03:47.543333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2026-11-11T22:03:47.543333Z</LastSchemaUpdate>
+          <Commands>
+            <Command>
+              <Text>CALCULATE;
+CREATE MEMBER CURRENTCUBE.[Measures].[Margen %] AS IIF([Measures].[Ventas] = 0, NULL, [Measures].[Utilidad] / [Measures].[Ventas]), FORMAT_STRING = "Percent", VISIBLE = 1;</Text>
+            </Command>
+          </Commands>
+        </MdxScript>
+      </MdxScripts>
+      <ProactiveCaching>
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" />
+      </ProactiveCaching>
+    </Cube>
+  </Cubes>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>AdventureWorksDW</ID>
+      <Name>AdventureWorksDW</Name>
+      <CreatedTimestamp>2026-11-11T22:03:47.283333Z</CreatedTimestamp>
+      <LastSchemaUpdate>2026-11-11T22:03:47.283333Z</LastSchemaUpdate>
+      <ConnectionString>Data Source=localhost;Initial Catalog=AdventureWorksDW2022;Integrated Security=True;TrustServerCertificate=True</ConnectionString>
+      <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <ManagedProvider>System.Data.SqlClient</ManagedProvider>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>DSV AW</ID>
+      <Name>DSV AW</Name>
+      <CreatedTimestamp>2026-11-11T22:03:47.296667Z</CreatedTimestamp>
+      <LastSchemaUpdate>2026-11-11T22:03:47.296667Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout />
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>0</DiagramViewPortLeft>
+                <DiagramViewPortTop>0</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>100</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>AdventureWorksDW</DataSourceID>
+      <Schema>
+        <xs:schema id="DSV_x0020_AW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="DSV_x0020_AW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="cc1eff46-980f-47bb-a75c-1eecee203c15">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="vDate" msprop:IsLogical="True" msprop:design-time-name="668f954a-9280-4943-9f5a-e8ca92d43b5d" msprop:QueryDefinition="SELECT DateKey, CONVERT(nvarchar(10), FullDateAlternateKey, 23) AS FechaNombre, CAST(CalendarYear AS int) AS Anio, CAST(CalendarYear AS int) * 10 + CAST(CalendarQuarter AS int) AS TrimestreKey, N'T' + CAST(CalendarQuarter AS nvarchar(1)) + N' ' + CAST(CalendarYear AS nvarchar(4)) AS TrimestreNombre, CAST(CalendarQuarter AS int) AS NumTrimestre, N'T' + CAST(CalendarQuarter AS nvarchar(1)) AS NumTrimestreNombre, CAST(CalendarYear AS int) * 100 + CAST(MonthNumberOfYear AS int) AS MesKey, SpanishMonthName + N' ' + CAST(CalendarYear AS nvarchar(4)) AS MesNombre FROM dbo.DimDate" msprop:FriendlyName="vDate" msprop:TableType="View" msprop:DbTableName="vDate">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="DateKey" msprop:FriendlyName="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="d8c493f8-7802-4ab3-ace0-208eb5efbee7" type="xs:int" />
+                      <xs:element name="FechaNombre" msprop:FriendlyName="FechaNombre" msprop:DbColumnName="FechaNombre" msprop:design-time-name="313ac1a4-d3c8-4445-80f0-4a36c61c4a65" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="Anio" msprop:FriendlyName="Anio" msprop:DbColumnName="Anio" msprop:design-time-name="b67ba5f3-01dd-4332-affd-8cfdf74ba682" type="xs:int" minOccurs="0" />
+                      <xs:element name="TrimestreKey" msprop:FriendlyName="TrimestreKey" msprop:DbColumnName="TrimestreKey" msprop:design-time-name="66309792-d7d3-4ef7-b8a3-794f4a654a33" type="xs:int" minOccurs="0" />
+                      <xs:element name="TrimestreNombre" msprop:FriendlyName="TrimestreNombre" msprop:DbColumnName="TrimestreNombre" msprop:design-time-name="fefc6173-4c43-4947-83c8-580cce27f2bb" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="10" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="NumTrimestre" msprop:FriendlyName="NumTrimestre" msprop:DbColumnName="NumTrimestre" msprop:design-time-name="68b2ac09-59ea-45fa-bf81-cdf95f19f138" type="xs:int" minOccurs="0" />
+                      <xs:element name="NumTrimestreNombre" msprop:FriendlyName="NumTrimestreNombre" msprop:DbColumnName="NumTrimestreNombre" msprop:design-time-name="b278fd85-345b-4dc3-adda-5e4f694ab5c0" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="5" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="MesKey" msprop:FriendlyName="MesKey" msprop:DbColumnName="MesKey" msprop:design-time-name="250dbec6-b351-4746-b353-c1ce0a2401ad" type="xs:int" minOccurs="0" />
+                      <xs:element name="MesNombre" msprop:FriendlyName="MesNombre" msprop:DbColumnName="MesNombre" msprop:design-time-name="1502bcab-11e1-4bb2-89ec-653df9b621ec" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="40" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="vProduct" msprop:IsLogical="True" msprop:design-time-name="5153ccaa-e6f0-4a1f-969d-52648ded2072" msprop:QueryDefinition="SELECT p.ProductKey, p.EnglishProductName AS Producto, CAST(ISNULL(sc.ProductSubcategoryKey, 0) AS int) AS SubcategoriaKey, ISNULL(sc.SpanishProductSubcategoryName, N'Sin subcategoria') AS Subcategoria, CAST(ISNULL(c.ProductCategoryKey, 0) AS int) AS CategoriaKey, ISNULL(c.SpanishProductCategoryName, N'Sin categoria') AS Categoria FROM dbo.DimProduct AS p LEFT JOIN dbo.DimProductSubcategory AS sc ON p.ProductSubcategoryKey = sc.ProductSubcategoryKey LEFT JOIN dbo.DimProductCategory AS c ON sc.ProductCategoryKey = c.ProductCategoryKey" msprop:FriendlyName="vProduct" msprop:TableType="View" msprop:DbTableName="vProduct">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="ProductKey" msprop:FriendlyName="ProductKey" msprop:DbColumnName="ProductKey" msprop:design-time-name="6c8d7903-dc2f-4fd3-8e06-173ecaa9f146" type="xs:int" />
+                      <xs:element name="Producto" msprop:FriendlyName="Producto" msprop:DbColumnName="Producto" msprop:design-time-name="b68bb424-ae57-4f55-aa7a-56c0b96590eb" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="SubcategoriaKey" msprop:FriendlyName="SubcategoriaKey" msprop:DbColumnName="SubcategoriaKey" msprop:design-time-name="fd0201af-edfc-495f-8782-b9e4de17fa18" type="xs:int" minOccurs="0" />
+                      <xs:element name="Subcategoria" msprop:FriendlyName="Subcategoria" msprop:DbColumnName="Subcategoria" msprop:design-time-name="b50385c2-1ff2-482a-8b84-46aec7e1f5b3" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="CategoriaKey" msprop:FriendlyName="CategoriaKey" msprop:DbColumnName="CategoriaKey" msprop:design-time-name="01372ad8-0944-4b5e-81b7-ad1cf5d33d74" type="xs:int" minOccurs="0" />
+                      <xs:element name="Categoria" msprop:FriendlyName="Categoria" msprop:DbColumnName="Categoria" msprop:design-time-name="889e6e94-d62b-420c-9ce5-51d8db382877" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="vTerritory" msprop:IsLogical="True" msprop:design-time-name="5e97d558-d8b2-4d66-8412-ceb8b52b70f6" msprop:QueryDefinition="SELECT SalesTerritoryKey, SalesTerritoryRegion AS Region, SalesTerritoryCountry AS Pais, SalesTerritoryGroup AS Grupo FROM dbo.DimSalesTerritory" msprop:FriendlyName="vTerritory" msprop:TableType="View" msprop:DbTableName="vTerritory">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="SalesTerritoryKey" msprop:FriendlyName="SalesTerritoryKey" msprop:DbColumnName="SalesTerritoryKey" msprop:design-time-name="adc7ff06-4cc5-4ffe-9c15-9e667837b1e2" type="xs:int" />
+                      <xs:element name="Region" msprop:FriendlyName="Region" msprop:DbColumnName="Region" msprop:design-time-name="8888e9e2-4f71-4003-87e9-07c8e26fed03" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="Pais" msprop:FriendlyName="Pais" msprop:DbColumnName="Pais" msprop:design-time-name="fa852ddf-afa6-46c9-8c4b-5a7f293c76d9" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="Grupo" msprop:FriendlyName="Grupo" msprop:DbColumnName="Grupo" msprop:design-time-name="81de8dc3-7662-480a-ba92-30a9071a5f2d" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="50" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="vChannel" msprop:IsLogical="True" msprop:design-time-name="ede33fa8-9808-4d01-9df1-a682a2079d50" msprop:QueryDefinition="SELECT 1 AS CanalKey, N'Internet' AS Canal UNION ALL SELECT 2, N'Reseller'" msprop:FriendlyName="vChannel" msprop:TableType="View" msprop:DbTableName="vChannel">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="CanalKey" msprop:FriendlyName="CanalKey" msprop:DbColumnName="CanalKey" msprop:design-time-name="55d67616-a0ee-4f5e-a1d1-872ed4b691d9" type="xs:int" />
+                      <xs:element name="Canal" msprop:FriendlyName="Canal" msprop:DbColumnName="Canal" msprop:design-time-name="b97cfd5a-6bae-446d-a907-2f41776bdc49" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="20" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="vFactSales" msprop:IsLogical="True" msprop:design-time-name="b436de71-af90-4735-87e5-9718cd40e515" msprop:QueryDefinition="SELECT 1 AS CanalKey, ProductKey, OrderDateKey, SalesTerritoryKey, CAST(OrderQuantity AS int) AS Cantidad, CAST(SalesAmount AS float) AS Ventas, CAST(TotalProductCost AS float) AS Costo, CAST(SalesAmount - TotalProductCost AS float) AS Utilidad FROM dbo.FactInternetSales UNION ALL SELECT 2, ProductKey, OrderDateKey, SalesTerritoryKey, CAST(OrderQuantity AS int), CAST(SalesAmount AS float), CAST(TotalProductCost AS float), CAST(SalesAmount - TotalProductCost AS float) FROM dbo.FactResellerSales" msprop:FriendlyName="vFactSales" msprop:TableType="View" msprop:DbTableName="vFactSales">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="CanalKey" msprop:FriendlyName="CanalKey" msprop:DbColumnName="CanalKey" msprop:design-time-name="9e7436a3-6cb9-48b9-ae6c-3196be55ad8c" type="xs:int" />
+                      <xs:element name="ProductKey" msprop:FriendlyName="ProductKey" msprop:DbColumnName="ProductKey" msprop:design-time-name="c74e9878-f77e-4336-a08b-99b207875af5" type="xs:int" />
+                      <xs:element name="OrderDateKey" msprop:FriendlyName="OrderDateKey" msprop:DbColumnName="OrderDateKey" msprop:design-time-name="2f9236e7-1981-4877-972f-ba2a27f03715" type="xs:int" />
+                      <xs:element name="SalesTerritoryKey" msprop:FriendlyName="SalesTerritoryKey" msprop:DbColumnName="SalesTerritoryKey" msprop:design-time-name="91baffdf-14e0-424b-bfe2-270d51d8b2d1" type="xs:int" />
+                      <xs:element name="Cantidad" msprop:FriendlyName="Cantidad" msprop:DbColumnName="Cantidad" msprop:design-time-name="c71c4c59-c7da-4e4f-b9d8-54ef8146105b" type="xs:int" minOccurs="0" />
+                      <xs:element name="Ventas" msprop:FriendlyName="Ventas" msprop:DbColumnName="Ventas" msprop:design-time-name="550faf44-1f39-40e3-9605-9dfa0e8c501e" type="xs:double" minOccurs="0" />
+                      <xs:element name="Costo" msprop:FriendlyName="Costo" msprop:DbColumnName="Costo" msprop:design-time-name="8f57e4fd-5f6d-450d-a1d2-f3ae4e5ba2f5" type="xs:double" minOccurs="0" />
+                      <xs:element name="Utilidad" msprop:FriendlyName="Utilidad" msprop:DbColumnName="Utilidad" msprop:design-time-name="a00787df-8b1c-426d-96ab-d4cee5341d74" type="xs:double" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <DSV_x0020_AW xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>
